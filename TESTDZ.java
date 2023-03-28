@@ -1,3 +1,13 @@
+package demoqaKhasia
+
+import org.junit.jupiter.api.Test;
+
 public class TESTDZ {
-    .Class
+    @Test
+    void DZTest() {
+
+        open("")
+
+    }
+
 }
