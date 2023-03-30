@@ -9,13 +9,10 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-
-public class DZ1TEST {
+public class PracticeFormTest extends TestBase {
     @Test
-    void mydztest() {
-        Configuration.holdBrowserOpen = true;
-        Configuration.browserSize = "1920x1080";
-        Configuration.browser = "chrome";
+    void successRegistrationTest() {
+
 
         String gender = "Male";
         String birthMonth = "January";
@@ -24,8 +21,7 @@ public class DZ1TEST {
         String subjects = "English";
         String hobbies = "Reading";
 
-
-        open("https://demoqa.com/automation-practice-form");
+        open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
