@@ -1,14 +1,6 @@
-package demoqaKhasia.tests;
+package demoqakhasia.tests;
 
-import demoqaKhasia.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
-
-import java.io.File;
-
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
 
 public class PracticeFormTestWithPageObjects extends TestBase {
 
@@ -16,6 +8,7 @@ public class PracticeFormTestWithPageObjects extends TestBase {
     void successRegistrationTest() {
 
         registrationPage.openPage()
+                        .removeBanners()
                         .setFirstname("DIMA")
                         .setLastname("KHASIA")
                         .setUserEmail("dihasiya@mail.ru")

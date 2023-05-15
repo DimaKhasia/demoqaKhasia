@@ -1,4 +1,4 @@
-package demoqaKhasia.pages.components;
+package demoqakhasia.pages.components;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
