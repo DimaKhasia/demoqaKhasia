@@ -1,16 +1,24 @@
-package demoqaKhasia.pages.components;
+package demoqakhasia.pages.components;
 
+import com.codeborne.selenide.SelenideElement;
+
+import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class ResultsModal {
+    SelenideElement resultsModal = $(".modal-dialog"),
+            resultsHeader = $("#example-modal-sizes-title-lg"),
+            resultsTable = $(".table-responsive");
+
+    // Actions
     public void verifyModalAppears() {
-        $(".modal-content").shouldBe(visible);
-        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+        resultsModal.should(appear);
+        resultsHeader.shouldHave(text("Thanks for submitting the form"));
     }
+
     public void verifyResult(String key, String value) {
-        $(".table-responsive").$(byText(key)).sibling(0).shouldHave(text(value));
+        resultsTable.$(byText(key)).sibling(0).shouldHave(text(value));
     }
 }
