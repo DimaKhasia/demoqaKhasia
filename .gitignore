@@ -1,5 +1,6 @@
-/.idea
-/.gradle
+.idea
+.gradle
 *.class
 gradlew
 gradlew.bat
+.DS_Store
