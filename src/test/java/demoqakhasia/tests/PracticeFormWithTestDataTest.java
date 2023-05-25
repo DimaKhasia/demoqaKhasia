@@ -10,7 +10,6 @@ import static demoqakhasia.utils.RandomUtils.getRandomInt;
 
 
 public class PracticeFormWithTestDataTest extends TestBase {
-    RegistrationPage registrationPage = new RegistrationPage();
     Faker faker = new Faker();
     String firstName = faker.name().firstName(),
             lastName = faker.name().lastName(),
